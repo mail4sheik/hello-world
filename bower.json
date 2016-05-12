@@ -1,0 +1,11 @@
+{
+  "name": "Github",
+  "homepage": "https://github.com/mail4sheik/hello-world/index.html",
+  "authors": [
+    "Sheik Mohammed Muzammil <mail4sheik@gmail.com>"
+  ],
+  "description": "Project to learn angular",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true
+}

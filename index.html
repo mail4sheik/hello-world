@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   <!-- <script type="text/javascript" src="com/js/angular.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="bower_components/jquery/dist/jquery.min.js">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    
     <title>Angular kickstart</title>
 </head>
 <body>
+    <div class="main-container" data-ng-app="">
+        <div class="left-form">
+            <div class="form-group">
+                <label class="form-label" for="form1-index">First Name</label>
+                <input class="form-input" id='form1-index' type="text" data-ng-model="fName">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="form2-index">Last Name</label>
+                <input class="form-input" id='form2-index' type="text" data-ng-model="lName">
+            </div>
+        </div>
+        <div class="right-form"></div>
+        
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </thead>
+                <tbody>
+                    <td ng-bind="fName"></td>
+                    <td ng-bind="lName"></td>
+                </tbody>
+                
+            </table>
+            
+            
+        </div>
+        
+    </div>
+    
+    
+    
     
 </body>
 </html>
