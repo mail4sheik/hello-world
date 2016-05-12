@@ -7,11 +7,13 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="com/js/mainapp.js" ></script>
+    <script type="text/javascript" src="com/js/maincontroller.js" ></script>
     
     <title>Angular kickstart</title>
 </head>
 <body>
-    <div class="main-container" data-ng-app="">
+    <div class="main-container" data-ng-app="mainApp" data-ng-init="allUsers = [{fName:'peter',lName:'robinson'},{fName:'mohammed',lName:'ali'},{fName:'imram',lName:'khan'}]">
         <div class="left-form">
             <div class="form-group">
                 <label class="form-label" for="form1-index">First Name</label>
@@ -23,6 +25,8 @@
             </div>
         </div>
         <div class="right-form"></div>
+        <div class="clear-fix"></div>
+        <div class="table-header" header-directive></div>
         
         <div class="table-container">
             <table class="table">
@@ -31,14 +35,18 @@
                     <th>Last Name</th>
                 </thead>
                 <tbody>
-                    <td ng-bind="fName"></td>
-                    <td ng-bind="lName"></td>
+                    <tr>
+                        <td ng-bind="fName"></td>
+                        <td ng-bind="lName"></td>
+                    </tr>
+                    <tr ng-repeat="i in allUsers">
+                        <td>{{i.fName}}</td>
+                        <td>{{i.lName}}</td>
+                    </tr>
                 </tbody>
-                
             </table>
-            
-            
         </div>
+        <div class="address-div" ng-controller="myCtrl" >The user Name is {{firstNameVal+' '+lastNameVal}}</div>
         
     </div>
     
