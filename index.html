@@ -9,6 +9,8 @@
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="com/js/mainapp.js" ></script>
     <script type="text/javascript" src="com/js/maincontroller.js" ></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js" ></script>
+    
     
     <title>Angular kickstart</title>
 </head>
@@ -46,8 +48,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="address-div" ng-controller="myCtrl" >The user Name is {{firstNameVal+' '+lastNameVal}}</div>
-        
+        <div class="address-div" ng-controller="myCtrl as customScope" >The user Name is {{customScope.firstNameVal+' '+customScope.lastNameVal}}</div>
+        <a ng-href="/#/secondform"> click to get next form</a>
+        <div ng-view></div>
     </div>
     
     

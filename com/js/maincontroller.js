@@ -1,5 +1,6 @@
-app.controller("myCtrl",function($scope){
-    $scope.firstNameVal = "john";
-    $scope.lastNameVal = "Doe";
+app.controller("myCtrl",function(){
+    var customScope = this;
+    customScope.firstNameVal = "john";
+    customScope.lastNameVal = "Doe";
     
 });
