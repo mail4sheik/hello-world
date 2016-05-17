@@ -9,7 +9,10 @@
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="com/js/mainapp.js" ></script>
     <script type="text/javascript" src="com/js/maincontroller.js" ></script>
+    <script type="text/javascript" src="templates/secondform/seconformcontroller.js" ></script>
+    
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js" ></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js" ></script>
     
     
     <title>Angular kickstart</title>
@@ -49,8 +52,16 @@
             </table>
         </div>
         <div class="address-div" ng-controller="myCtrl as customScope" >The user Name is {{customScope.firstNameVal+' '+customScope.lastNameVal}}</div>
-        <a ng-href="/#/secondform"> click to get next form</a>
-        <div ng-view></div>
+        <a href="#secondform"> click to get second form</a>
+        <a href="#thirdform"> click to get third form</a>
+        <a ng-href="#other"> click to get other form</a>
+        <ng-view></ng-view>
+        <hr>
+        <a ui-sref="state1">State 1 link</a>
+        <a ui-sref="state2">State 2 link</a>
+        
+        <div ui-view></div>
+        
     </div>
     
     
