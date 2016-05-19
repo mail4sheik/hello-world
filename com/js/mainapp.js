@@ -1,4 +1,5 @@
 var app = angular.module("mainApp",['ngRoute','ui.router']);
+
 /*
 app.config(['$routeProvider',function($routeProvider){
     $routeProvider
@@ -10,6 +11,8 @@ app.config(['$routeProvider',function($routeProvider){
         
     });
 }]);*/
+//firstmodule.state1controller();
+/*
 app.config(['$routeProvider','$stateProvider', '$urlRouterProvider',
         function($routeProvider,$stateProvider,$urlRouterProvider) {
             $routeProvider.
@@ -20,11 +23,11 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider',
                 when('/thirdform', {
                     templateUrl: 'templates/thirdform/thirdform.html'
                    
-                });
-/*                .otherwise({
+                })
+                .otherwise({
                     templateUrl: 'templates/fourthform/fourthform.html'
                     
-                });*/
+                });
             $stateProvider
                 .state('state1',{
                     url:"/state1",
@@ -38,10 +41,8 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider',
                 })
                 .state('state1.list',{
                     url:"/list",
-                    templateUrl:"states/state1.list.html",
-                    controller:function($scope){
-                        $scope.items = ["A","List","Of","items"];
-                    }
+                    templateUrl:"states/state1.list.html"
+                   // controller:function($scope){firstmodule.state1controller($scope);}
                 })
                 .state('state2.list',{
                     url:"/list",
@@ -50,10 +51,10 @@ app.config(['$routeProvider','$stateProvider', '$urlRouterProvider',
                         $scope.things=["A","Set","Of","Things"];
                     }
                 });
-        }]);
-app.directive("headerDirective",function(){
+        }]);*/
+/*app.directive("headerDirective",function(){
     return{
         template:"User Name Table"
     };
 
-});
+});*/

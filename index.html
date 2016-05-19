@@ -7,12 +7,15 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+   
     <script type="text/javascript" src="com/js/mainapp.js" ></script>
     <script type="text/javascript" src="com/js/maincontroller.js" ></script>
+    <script type="text/javascript" src="dummy/dummy.js" ></script>
     <script type="text/javascript" src="templates/secondform/seconformcontroller.js" ></script>
     
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js" ></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js" ></script>
+     <script type="text/javascript" src="modules/mainmodule.js" ></script>
     
     
     <title>Angular kickstart</title>
@@ -51,7 +54,8 @@
                 </tbody>
             </table>
         </div>
-        <div class="address-div" ng-controller="myCtrl as customScope" >The user Name is {{customScope.firstNameVal+' '+customScope.lastNameVal}}</div>
+        <!--  ng-controller="myCtrl as customScope" -->
+        <div class="address-div" >The user Name is {{customScope.firstNameVal+' '+customScope.lastNameVal}}</div>
         <a href="#secondform"> click to get second form</a>
         <a href="#thirdform"> click to get third form</a>
         <a ng-href="#other"> click to get other form</a>
@@ -59,7 +63,6 @@
         <hr>
         <a ui-sref="state1">State 1 link</a>
         <a ui-sref="state2">State 2 link</a>
-        
         <div ui-view></div>
         
     </div>
